@@ -22,7 +22,7 @@ always on top stealth ai chatbot
 
 1. **Clone or download this repository**
    ```bash
-   git clone repoURL
+   git clone https://github.com/EamonnPatt/Lockdown-Workaround.git
    cd electron-ai-chat
    ```
 

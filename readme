@@ -1,0 +1,171 @@
+#  AI Chat Assistant
+always on top stealth ai chatbot
+##  Features
+
+-  **Always On Top** - Stays visible above all other windows
+-  **Global Hotkeys** - Control from anywhere with Ctrl+M and Ctrl+N
+-  **No Taskbar Icon** - Clean, distraction-free experience
+-  **Dark Theme** - Easy on the eyes with a modern dark interface
+-  **Multiple AI Providers** - Support for Groq and OpenRouter
+-  **Lightning Fast** - Powered by Groq's ultra-fast inference
+-  **Privacy First** - API keys stored locally, no data collection
+-  **Clean Chat UI** - Beautiful, animated chat interface
+
+##  Quick Start
+
+### Prerequisites
+
+- Node.js (v16 or higher)
+- npm or yarn
+
+### Installation
+
+1. **Clone or download this repository**
+   ```bash
+   git clone repoURL
+   cd electron-ai-chat
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Get a free API key**
+   - **Groq (Recommended)**: Visit [console.groq.com](https://console.groq.com)
+   - **OpenRouter**: Visit [openrouter.ai](https://openrouter.ai)
+   - Sign up for free (no credit card required)
+   - Create an API key
+
+4. **Run the app**
+   ```bash
+   npm start
+   ```
+
+5. **Enter your API key** in the app and start chatting!
+
+## ⌨️ Keyboard Shortcuts
+
+| Shortcut | Action |
+|----------|--------|
+| `Ctrl+M` or `Cmd+M` | Minimize the window |
+| `Ctrl+N` or `Cmd+N` | Restore/Show the window |
+| `Enter` | Send message |
+| `Shift+Enter` | New line in message |
+
+## 🏗️ Building Executables
+
+### Build for Windows                       !!!!!!!!!!!!!!!!!!!!!!!!!! This is how you create the app
+
+Create installer and portable executable:
+```bash
+npm run build:win
+```
+
+Output location: `dist/`
+- `AI Chat Assistant Setup 1.0.0.exe` - Installer
+- `AI Chat Assistant 1.0.0.exe` - Portable version
+
+### Build for macOS
+
+```bash
+npm run build:mac
+```
+
+### Build for Linux
+
+```bash
+npm run build:linux
+```
+
+### Build for All Platforms
+
+```bash
+npm run build
+```
+
+### Modify Window Size
+
+Edit `main.js`:
+```javascript
+width: 900,  // Change width
+height: 700, // Change height
+```
+
+### Change AI Model
+
+Edit `main.js` to use different models:
+```javascript
+// For Groq
+model: 'llama-3.3-70b-versatile'  // or 'mixtral-8x7b-32768'
+
+// For OpenRouter
+model: 'google/gemini-2.0-flash-exp:free'
+```
+
+### Adjust Theme Colors
+
+Edit `styles.css` to customize colors:
+```css
+background: #1e1e1e;  /* Main background */
+color: #e0e0e0;       /* Text color */
+```
+
+## Free AI Providers
+
+### Groq (Recommended)
+- **Speed**: Ultra-fast responses
+- **Limits**: 14,400 requests/day
+- **Models**: Llama 3.3 70B, Mixtral, Gemma
+- **Sign up**: [console.groq.com](https://console.groq.com)
+
+### OpenRouter
+- **Variety**: Access to multiple models
+- **Limits**: Varies by model
+- **Models**: Gemini, Llama, Claude (free tier)
+- **Sign up**: [openrouter.ai](https://openrouter.ai)
+
+## Privacy & Security
+
+- API keys are stored locally in your browser's localStorage
+- No data is sent to any servers except the AI provider you choose
+- No analytics or tracking
+- Open source - review the code yourself
+
+## Troubleshooting
+
+### "Provider returned error"
+- Check that your API key is correct
+- Verify you have free credits remaining
+- Try switching between Groq and OpenRouter
+
+### Window won't stay on top
+- Restart the application
+- Check your OS permissions for window management
+
+### Can't find the window after minimizing
+- Press `Ctrl+N` (or `Cmd+N` on Mac) to restore it
+- The window has no taskbar icon, so shortcuts are required
+
+## Development
+
+### Run in development mode
+```bash
+npm start
+```
+
+### Install new dependencies
+```bash
+npm install
+```
+
+### Debug
+Open DevTools with `Ctrl+Shift+I` or `Cmd+Option+I`
+
+## Contributing
+
+Contributions are welcome! Feel free to:
+- Report bugs
+- Suggest new features
+- Submit pull requests
+

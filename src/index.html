@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Chat Assistant</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="header">
+    <h1>AI Chat </h1>
+  </div>
+
+  <div class="api-setup">
+    <select id="providerSelect">
+      <option value="groq">Groq (Recommended, Free)</option>
+      <option value="openrouter">OpenRouter</option>
+    </select>
+    <input 
+      type="password" 
+      id="apiKey" 
+      placeholder="Enter your API key (get free key at groq.com)"
+    >
+    <small>API key is stored locally</small>
+  </div>
+
+  <div class="chat-container" id="chatContainer">
+    <div class="message ai">
+      <div class="message-avatar">AI</div>
+      <div class="message-content">
+        Hello! I'm your AI assistant. Choose a provider and get a free API key:<br>
+        <strong>Groq (Recommended):</strong> Very fast, get key at <strong>console.groq.com</strong><br>
+        <strong>OpenRouter:</strong> Multiple models, get key at <strong>openrouter.ai</strong>
+      </div>
+    </div>
+  </div>
+
+  <div class="input-container">
+    <div class="input-wrapper">
+      <textarea 
+        id="messageInput" 
+        placeholder="Type your message here..."
+        rows="1"
+      ></textarea>
+      <button id="sendButton">Send</button>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

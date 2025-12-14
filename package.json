@@ -1,0 +1,67 @@
+{
+  "name": "ai-chat",
+  "version": "1.0.0",
+  "description": "AI Chat application with Electron",
+  "main": "./src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "build:win": "electron-builder --win",
+    "build:mac": "electron-builder --mac",
+    "build:linux": "electron-builder --linux"
+  },
+  "build": {
+    "appId": "com.electronai.chat",
+    "productName": "AI Chat Assistant",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "./src/main.js",
+      "./src/preload.js",
+      "./src/renderer.js",
+      "./src/index.html",
+      "./src/styles.css",
+      "./src/EP.ico"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        },
+        {
+          "target": "portable",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "./src/EP.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "AI Chat Assistant"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "./src/EP.ico",
+      "category": "public.app-category.productivity"
+    },
+    "linux": {
+      "target": ["AppImage", "deb"],
+      "icon": "/src/EP.ico",
+      "category": "Utility"
+    }
+  },
+  "dependencies": {
+    
+  },
+  "devDependencies": {
+    "electron-builder": "^24.9.1",
+    "electron": "^28.0.0"
+  },
+  "author": "",
+  "license": "MIT"
+}
